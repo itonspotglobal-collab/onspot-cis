@@ -1,110 +1,171 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OnSpot Intranet Portal</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f6f8;
-      color: #333;
-    }
-    header {
-      background: #0b3d91;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      display: flex;
-      height: calc(100vh - 70px);
-    }
-    aside {
-      width: 250px;
-      background: #ffffff;
-      border-right: 1px solid #ddd;
-      padding: 1rem;
-    }
-    main {
-      flex: 1;
-      padding: 2rem;
-      overflow-y: auto;
-    }
-    footer {
-      background: #f1f1f1;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    .card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin-bottom: 1.5rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>OnSpot Workspace Intranet</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Teams</a>
-      <a href="#">Projects</a>
-      <a href="#">Resources</a>
-      <a href="#">Help</a>
-    </nav>
-  </header>
+"use client";
 
-  <div class="container">
-    <aside>
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#">Announcements</a></li>
-        <li><a href="#">HR Forms</a></li>
-        <li><a href="#">IT Support</a></li>
-        <li><a href="#">Directory</a></li>
-      </ul>
-    </aside>
+import { useState } from "react";
 
-    <main>
-      <div class="card">
-        <h2>Welcome to the OnSpot Intranet</h2>
-        <p>Stay connected with updates, resources, and tools for your daily work.</p>
+export default function HomePage() {
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+
+  return (
+    <div className="flex flex-col h-screen bg-gray-100 text-gray-800">
+      {/* Header */}
+      <header className="bg-blue-900 text-white flex items-center justify-between px-6 py-4 shadow-md">
+        <h1 className="text-xl font-semibold tracking-wide">
+          OnSpot Workspace Intranet
+        </h1>
+        <nav className="space-x-4 hidden md:block">
+          <a href="#" className="hover:underline">
+            Home
+          </a>
+          <a href="#" className="hover:underline">
+            Teams
+          </a>
+          <a href="#" className="hover:underline">
+            Resources
+          </a>
+          <a href="#" className="hover:underline">
+            Help
+          </a>
+        </nav>
+        <button
+          className="md:hidden bg-blue-700 px-3 py-2 rounded"
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+        >
+          ☰
+        </button>
+      </header>
+
+      {/* Body */}
+      <div className="flex flex-1 overflow-hidden">
+        {/* Sidebar */}
+        <aside
+          className={`${
+            sidebarOpen ? "w-64" : "w-0"
+          } bg-white border-r border-gray-200 p-4 transition-all duration-300 overflow-y-auto`}
+        >
+          <h3 className="text-blue-900 font-semibold mb-3">Quick Links</h3>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <span className="block p-2 font-semibold text-blue-900">
+                📂 Files
+              </span>
+              <ul className="ml-4 space-y-1 text-blue-700">
+                <li>
+                  <a
+                    href="/Delivery Playbook.pdf"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    Delivery Playbook
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/Invoice-FA143B28-0040.pdf"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    Invoice FA143B28-0040
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/KnowledgeBaseforVanessa.pdf"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    KnowledgeBase for Vanessa
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/OnSpot.HR.Job Success System.pdf"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    HR Job Success System
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/OnSpot.TA.Talent Acquisition Process Framework.09012.pdf"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    Talent Acquisition Framework
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/Roster_(OnSpot_Global).pdf"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    Roster (OnSpot Global)
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/The 4-Rules of Our Hiring Talent - Framework.pdf"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    The 4 Rules of Hiring Talent
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </aside>
+
+        {/* Main Content */}
+        <main className="flex-1 overflow-y-auto p-6">
+          {/* Welcome */}
+          <section className="bg-white p-6 rounded-lg shadow-md mb-6">
+            <h2 className="text-2xl font-semibold text-blue-900 mb-2">
+              Welcome to the OnSpot Intranet
+            </h2>
+            <p className="text-gray-700">
+              Stay connected with company news, internal tools, and resources
+              designed to help you work smarter and stay informed.
+            </p>
+          </section>
+
+          {/* Cards Section */}
+          <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Resources */}
+            <div className="bg-white p-5 rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold text-blue-900 mb-3">
+                Resources
+              </h3>
+              <ul className="text-sm space-y-2">
+                <li>
+                  📘{" "}
+                  <a href="#" className="text-blue-700 hover:underline">
+                    Employee Handbook
+                  </a>
+                </li>
+                <li>
+                  🧾{" "}
+                  <a href="#" className="text-blue-700 hover:underline">
+                    Expense Reimbursement Form
+                  </a>
+                </li>
+                <li>
+                  💡{" "}
+                  <a href="#" className="text-blue-700 hover:underline">
+                    Project Templates
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </main>
       </div>
 
-      <div class="card">
-        <h3>Company News</h3>
-        <p>New workspace tools launching next week! Check your email for details.</p>
-      </div>
-
-      <div class="card">
-        <h3>Upcoming Events</h3>
-        <ul>
-          <li>🎉 Team Building Day – Nov 5</li>
-          <li>🧠 Workshop: AI Tools at Work – Nov 10</li>
-        </ul>
-      </div>
-    </main>
-  </div>
-
-  <footer>
-    © 2025 OnSpot Workspace • All Rights Reserved
-  </footer>
-</body>
-</html>
+      {/* Footer */}
+      <footer className="bg-gray-200 text-center text-sm text-gray-600 py-3 border-t">
+        © 2025 OnSpot Workspace • Internal Use Only
+      </footer>
+    </div>
+  );
+}
