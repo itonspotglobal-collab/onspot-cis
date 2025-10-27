@@ -9,16 +9,15 @@ export default function HomePage() {
     <div className="flex flex-col h-screen bg-gray-100 text-gray-800">
       {/* Header */}
       <header className="bg-blue-900 text-white flex items-center justify-between px-6 py-4 shadow-md">
-        <h1 className="text-xl font-semibold tracking-wide">OnSpot Workspace Intranet</h1>
+        <h1 className="text-xl font-semibold tracking-wide">
+          OnSpot Workspace Intranet
+        </h1>
         <nav className="space-x-4 hidden md:block">
           <a href="#" className="hover:underline">
             Home
           </a>
           <a href="#" className="hover:underline">
             Teams
-          </a>
-          <a href="#" className="hover:underline">
-            Projects
           </a>
           <a href="#" className="hover:underline">
             Resources
@@ -46,24 +45,74 @@ export default function HomePage() {
           <h3 className="text-blue-900 font-semibold mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="#" className="block p-2 rounded hover:bg-blue-50">
-                📢 Announcements
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block p-2 rounded hover:bg-blue-50">
-                📄 HR Forms
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block p-2 rounded hover:bg-blue-50">
-                💻 IT Support
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block p-2 rounded hover:bg-blue-50">
-                👥 Employee Directory
-              </a>
+              <span className="block p-2 font-semibold text-blue-900">
+                📂 Files
+              </span>
+              <ul className="ml-4 space-y-1 text-blue-700">
+                <li>
+                  <a
+                    href="/Delivery Playbook.pdf"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    Delivery Playbook
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/Invoice-FA143B28-0040.pdf"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    Invoice FA143B28-0040
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/KnowledgeBaseforVanessa.pdf"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    KnowledgeBase for Vanessa
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/OnSpot.HR.Job Success System.pdf"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    HR Job Success System
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/OnSpot.TA.Talent Acquisition Process Framework.09012.pdf"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    Talent Acquisition Framework
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/Roster_(OnSpot_Global).pdf"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    Roster (OnSpot Global)
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/The 4-Rules of Our Hiring Talent - Framework.pdf"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    The 4 Rules of Hiring Talent
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </aside>
@@ -76,36 +125,18 @@ export default function HomePage() {
               Welcome to the OnSpot Intranet
             </h2>
             <p className="text-gray-700">
-              Stay connected with company news, internal tools, and resources designed to help
-              you work smarter and stay informed.
+              Stay connected with company news, internal tools, and resources
+              designed to help you work smarter and stay informed.
             </p>
           </section>
 
           {/* Cards Section */}
           <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Company News */}
-            <div className="bg-white p-5 rounded-lg shadow-md">
-              <h3 className="text-lg font-semibold text-blue-900 mb-3">Company News</h3>
-              <ul className="text-sm space-y-2">
-                <li>📰 New workspace tools launching next week</li>
-                <li>💼 HR is hiring for new marketing roles</li>
-                <li>🚀 OnSpot Portal v2.0 launching in November</li>
-              </ul>
-            </div>
-
-            {/* Events */}
-            <div className="bg-white p-5 rounded-lg shadow-md">
-              <h3 className="text-lg font-semibold text-blue-900 mb-3">Upcoming Events</h3>
-              <ul className="text-sm space-y-2">
-                <li>🎉 Team Building Day — Nov 5</li>
-                <li>🧠 Workshop: AI Tools at Work — Nov 10</li>
-                <li>🍽️ Holiday Lunch — Dec 15</li>
-              </ul>
-            </div>
-
             {/* Resources */}
             <div className="bg-white p-5 rounded-lg shadow-md">
-              <h3 className="text-lg font-semibold text-blue-900 mb-3">Resources</h3>
+              <h3 className="text-lg font-semibold text-blue-900 mb-3">
+                Resources
+              </h3>
               <ul className="text-sm space-y-2">
                 <li>
                   📘{" "}
