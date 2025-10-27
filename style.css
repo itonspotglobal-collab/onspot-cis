@@ -1,0 +1,165 @@
+/* ---------- GLOBAL STYLES ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background-color: #0b3d91;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ---------- SIDEBAR ---------- */
+aside {
+  width: 250px;
+  background-color: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 1.5rem;
+  transition: width 0.3s ease;
+}
+
+aside h3 {
+  margin-bottom: 1rem;
+  color: #0b3d91;
+  font-size: 1.1rem;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside ul li {
+  margin: 0.8rem 0;
+}
+
+aside ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+aside ul li a:hover {
+  color: #0b3d91;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+main {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.card h2, .card h3 {
+  color: #0b3d91;
+  margin-bottom: 0.8rem;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card ul li {
+  margin: 0.5rem 0;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ddd;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  nav {
+    display: none; /* optional: hide top nav for mobile if using sidebar nav */
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  aside {
+    padding: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
+
+/* ---------- OPTIONAL: SIDEBAR*

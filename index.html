@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OnSpot Intranet Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: #0b3d91;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      display: flex;
+      height: calc(100vh - 70px);
+    }
+    aside {
+      width: 250px;
+      background: #ffffff;
+      border-right: 1px solid #ddd;
+      padding: 1rem;
+    }
+    main {
+      flex: 1;
+      padding: 2rem;
+      overflow-y: auto;
+    }
+    footer {
+      background: #f1f1f1;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>OnSpot Workspace Intranet</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Teams</a>
+      <a href="#">Projects</a>
+      <a href="#">Resources</a>
+      <a href="#">Help</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Announcements</a></li>
+        <li><a href="#">HR Forms</a></li>
+        <li><a href="#">IT Support</a></li>
+        <li><a href="#">Directory</a></li>
+      </ul>
+    </aside>
+
+    <main>
+      <div class="card">
+        <h2>Welcome to the OnSpot Intranet</h2>
+        <p>Stay connected with updates, resources, and tools for your daily work.</p>
+      </div>
+
+      <div class="card">
+        <h3>Company News</h3>
+        <p>New workspace tools launching next week! Check your email for details.</p>
+      </div>
+
+      <div class="card">
+        <h3>Upcoming Events</h3>
+        <ul>
+          <li>🎉 Team Building Day – Nov 5</li>
+          <li>🧠 Workshop: AI Tools at Work – Nov 10</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    © 2025 OnSpot Workspace • All Rights Reserved
+  </footer>
+</body>
+</html>
